@@ -1,4 +1,4 @@
 echo "Starting Syn-Scan tests"
 echo "-----------------------"
-sudo nmap -sS 142.250.113.138
+sudo nmap -sP 142.250.113.138
 echo "-----------------------"
