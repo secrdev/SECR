@@ -1,4 +1,5 @@
 echo "Starting Syn-Scan tests"
 echo "-----------------------"
-sudo nmap -sP 142.250.113.138
+sudo nmap -sS 142.250.113.138
+# look for open ports ^, scan accordingly 
 echo "-----------------------"
