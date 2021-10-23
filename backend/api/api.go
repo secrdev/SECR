@@ -22,7 +22,7 @@ type Vulnerability struct {
 }
 
 func ExecuteVulnscan(URL string) {
-	out, err := exec.Command(fmt.Sprintf("../nmap/vulnscan.sh %s", URL)).Output()
+	out, err := exec.Command("nmap/vulnscan.sh").Output()
 	if err != nil {
 		log.Fatal(err)
 	}
