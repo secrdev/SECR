@@ -7,10 +7,12 @@ type VulnReport struct {
 
 // Vulnerability is a struct representation of a detected vulnerability thru nmap
 type Vulnerability struct {
-	Port    uint32
-	Service string
-	ID      string
-	URL     string
+	Port      uint32
+	Service   string
+	ID        string
+	IsExploit bool
+	Type      string
+	Cvss      uint8
 }
 
 func ReportHandler() {
