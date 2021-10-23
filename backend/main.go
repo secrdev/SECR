@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"secr/api"
+)
 
 func main() {
-	fmt.Println("hello, world")
+	api.ExecuteVulnscan("127.0.0.1")
 }
