@@ -12,3 +12,6 @@ type Vulnerability struct {
 	ID      string
 	URL     string
 }
+
+func ReportHandler() {
+}
