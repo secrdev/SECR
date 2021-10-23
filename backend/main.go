@@ -1,9 +1,12 @@
 package main
 
 import (
+	"log"
+	"net/http"
 	"secr/api"
 )
 
 func main() {
-	api.ExecuteVulnscan("127.0.0.1")
+	http.HandleFunc("/", api.HandleReportRequest)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
