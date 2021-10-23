@@ -1,4 +1,3 @@
-
 echo "nmap-vulners"
 sudo nmap --script nmap-vulners -sV $1
 echo "vulns"
