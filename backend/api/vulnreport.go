@@ -1,11 +1,5 @@
 package api
 
-import (
-	"fmt"
-	"log"
-	"os/exec"
-)
-
 // VulnerabilityReport is an entire report (collection of vulnerabilities)
 type VulnReport struct {
 	Vulnerabilities []Vulnerability
@@ -21,10 +15,7 @@ type Vulnerability struct {
 	Cvss      uint8  `xml:"cvss"`
 }
 
-func ExecuteVulnscan(URL string) {
-	out, err := exec.Command("sh", "vulnscan.sh").Output()
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(string(out[:]))
+func ExecuteVulnscan(URL string) (VulnReport, error) {
+	var report VulnReport
+	return VulnReport{}, nil
 }
