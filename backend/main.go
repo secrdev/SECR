@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", api.HandleReportRequest)
+	http.HandleFunc("/report", api.HandleReportRequest)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
