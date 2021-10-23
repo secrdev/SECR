@@ -1,1 +1,1 @@
-sudo nmap -sV -Pn $1 --script=nmap-vulners/vulners.nse -p22, 80, 443
+sudo nmap --script nmap-vulners -sV $1
