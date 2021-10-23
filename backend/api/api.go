@@ -1,6 +1,7 @@
 package api
 
 type VulnReport struct {
+	Vulnerabilities []Vulnerability
 }
 
 type Vulnerability struct {
