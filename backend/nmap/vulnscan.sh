@@ -1,1 +1,1 @@
-sudo nmap -sV $1 --script=nmap-vulners/vulners.nse
+sudo nmap -T3 -sV $1 --script=nmap-vulners/vulners.nse -p1-10000
