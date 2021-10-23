@@ -1,1 +1,1 @@
-sudo nmap --script nmap-vulners -sV $1
+sudo nmap --script nmap-vulners -sV $1 -oX analysis.xml
