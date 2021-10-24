@@ -21,7 +21,7 @@ type Vulnerability struct {
 }
 
 func ExecuteVulnscan(URL string) error {
-	output, err := exec.Command("/bin/sh", "./vulnscan.sh", URL).Output()
+	output, err := exec.Command("/bin/sh", "./nmap/vulnscan.sh", URL).Output()
 	if err != nil {
 		return err
 	}
