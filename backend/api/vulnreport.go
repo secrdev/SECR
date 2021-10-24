@@ -1,30 +1,28 @@
 package api
 
 import (
-	"fmt"
+	"encoding/xml"
 	"os/exec"
 )
 
-// VulnerabilityReport is an entire report (collection of vulnerabilities)
-type VulnReport struct {
+type Vulnreport struct {
+	XMLName         xml.Name `xml:"table"`
 	Vulnerabilities []Vulnerability
 }
 
-// Vulnerability is a struct representation of a detected vulnerability thru nmap
 type Vulnerability struct {
-	Port      uint32 `xml:"portid"`
-	Service   string `xml:"output"`
-	ID        string `xml:"id"`
-	IsExploit bool   `xml:"is_exploit"`
-	Type      string `xml:"type"`
-	Cvss      uint8  `xml:"cvss"`
+	ID        string `xml:"elem"`
+	Type      string `xml:"elem"`
+	Cvss      string `xml:"elem"`
+	IsExploit bool   `xml:"elem"`
 }
 
 func ExecuteVulnscan(URL string) error {
+	var report Vulnreport
 	output, err := exec.Command("/bin/sh", "./nmap/vulnscan.sh", URL).Output()
 	if err != nil {
 		return err
 	}
-	fmt.Println(string(output))
+	xml.Unmarshal(output, &report)
 	return nil
 }
