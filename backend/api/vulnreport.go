@@ -12,10 +12,10 @@ type Vulnreport struct {
 }
 
 type Vulnerability struct {
-	ID        string `xml:"id,attr"`
-	Type      string `xml:"type,attr"`
-	Cvss      string `xml:"cvss,attr"`
-	IsExploit bool   `xml:"is_exploit,attr"`
+	ID        string `xml:"key,attr"`
+	Type      string `xml:"key,attr"`
+	Cvss      string `xml:"key,attr"`
+	IsExploit bool   `xml:"key,attr"`
 }
 
 func ExecuteVulnscan(URL string) error {
