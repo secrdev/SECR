@@ -1,17 +1,11 @@
 package api
 
 import (
-	"encoding/xml"
 	"fmt"
 	"os/exec"
 )
 
-type Vulnreport struct {
-	XMLName         xml.Name `xml:"table"`
-	Vulnerabilities []Vulnerability
-}
-
-type Vulnerability struct {
+type Table struct {
 	ID        string `xml:"key,attr"`
 	Type      string `xml:"key,attr"`
 	Cvss      string `xml:"key,attr"`
