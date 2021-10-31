@@ -11,5 +11,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("%+q\n", output)
+	// fmt.Printf("%+q\n", output)
+	for _, v := range output {
+		fmt.Println(string(v))
+	}
 }
