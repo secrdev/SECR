@@ -6,7 +6,7 @@ import (
 )
 
 var regexPatterns = map[string]string{
-	"cve":  `CVE-\d{4}-\d{1,10}`,
+	"cve":  `(CVE-\d{4}-\d{1,10}){1}`,
 	"port": `\d{0,5}/tcp`,
 }
 
