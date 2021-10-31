@@ -11,5 +11,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(fmt.Sprintf("%+q\n", output))
+	fmt.Printf("%+q\n", output)
 }
