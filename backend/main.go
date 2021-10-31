@@ -1,18 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"log"
+	"net/http"
 	"secr/api"
 )
 
 func main() {
-	output, err := api.ExecuteVulnscan("127.0.0.1")
-	if err != nil {
-		log.Fatal(err)
-	}
-	// fmt.Printf("%+q\n", output)
-	for _, v := range output {
-		fmt.Println(string(v))
-	}
+	http.HandleFunc("/", api.HandleReportRequest)
+	http.ListenAndServe(":8080", nil)
 }
