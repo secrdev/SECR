@@ -1,7 +1,6 @@
 package api
 
 import (
-	"fmt"
 	"os/exec"
 	"regexp"
 )
@@ -11,12 +10,11 @@ var regexPatterns = map[string]string{
 	"port": `\d{0,5}/tcp`,
 }
 
-func ExecuteVulnscan(URL string) (string, error) {
+func ExecuteVulnscan(URL string) ([][]byte, error) {
 	output, err := exec.Command("/bin/sh", "./nmap/vulnscan.sh", URL).Output()
 	if err != nil {
-		return "", err
+		return nil, err
 	}
-	// fmt.Println(string(output))
 	re := regexp.MustCompile(regexPatterns["cve"])
-	return fmt.Sprintf("%q\n", (re.FindAll(output, -1))), nil
+	return re.FindAll(output, -1), nil
 }
