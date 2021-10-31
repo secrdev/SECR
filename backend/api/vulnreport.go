@@ -16,6 +16,7 @@ func ExecuteVulnscan(URL string) (string, error) {
 	if err != nil {
 		return "", err
 	}
+	// fmt.Println(string(output))
 	re := regexp.MustCompile(regexPatterns["cve"])
 	return fmt.Sprintf("%q\n", (re.FindAll(output, -1))), nil
 }
