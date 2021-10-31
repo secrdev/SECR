@@ -5,8 +5,13 @@ import (
 	"regexp"
 )
 
+type Report struct {
+	Port  uint32   `json:"port"`
+	Vulns []string `json:"vulns"`
+}
+
 var regexPatterns = map[string]string{
-	"cve":  `https://vulners.com/cve/CVE-\d{4}-\d{1,10}`,
+	"cve":  `https://vulners.com/cve/^CVE-\d{4}-\d{1,10}`,
 	"port": `\d{0,5}/tcp`,
 }
 
