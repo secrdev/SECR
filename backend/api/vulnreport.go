@@ -10,6 +10,6 @@ func ExecuteVulnscan(URL string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println(output)
+	fmt.Println(string(output))
 	return nil
 }
