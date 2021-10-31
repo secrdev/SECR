@@ -6,7 +6,7 @@ import (
 )
 
 type Report struct {
-	Service string   `json:"port"`
+	Service string   `json:"service"`
 	Vulns   []string `json:"vulns"`
 }
 
