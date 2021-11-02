@@ -1,6 +1,7 @@
 package api
 
 import (
+	"fmt"
 	"os/exec"
 	"regexp"
 )
@@ -24,6 +25,7 @@ func ExecuteVulnscan(URL string) (Report, error) {
 	re := regexp.MustCompile(regexPatterns["cve"])
 	cveSearch := re.FindAll(output, -1)
 	for _, v := range cveSearch {
+		fmt.Println(string(v))
 		report.Vulns = append(report.Vulns, string(v))
 	}
 	return report, nil
