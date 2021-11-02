@@ -7,9 +7,11 @@ body {
 }
 
 .Logo {
-  background: linear-gradient(to right, #ff0000, #ff7a00);
+  text-align: center;
+  background: linear-gradient(to right, #ff0000, #FF7A00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .App-header {
@@ -17,7 +19,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-  padding-bottom: 10%;
+  padding-bottom: 75%;
   justify-content: center;
-  font-size: calc(150px + 2vmin);
+  font-size: calc(125px + 2vmin);
 }
+
