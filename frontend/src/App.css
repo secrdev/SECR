@@ -4,7 +4,6 @@
 
 .Logo {
   text-align: center;
-  vertical-align: middle;
   background: linear-gradient(to right, #ff0000, #FF7A00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -17,6 +16,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(50px + 2vmin);
+  font-size: calc(150px + 2vmin);
 }
 
