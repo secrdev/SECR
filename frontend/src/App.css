@@ -17,7 +17,7 @@ body {
   background: linear-gradient(to right, #ff0000, #ff9500);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-size: 20vw;
+  font-size: 18vw;
   margin: 0;
 }
 
@@ -26,11 +26,8 @@ body {
   border-radius: 8px;
   outline: none;
   background-color: #343434;
-  width: 50vw;
+  width: 47vw;
   height: 4vh;
-}
-
-.URL-input:focus {
   color: #ffffff;
   padding-left: 0.5vw;
   font-weight: bold;
