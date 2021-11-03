@@ -1,33 +1,28 @@
 body {
   overflow: hidden;
+  background-color: #252525;
 }
 
 .App {
   text-align: center;
-  background-color: #252525;
-}
-
-.Form-container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .Logo {
-  text-align: center;
   background: linear-gradient(to right, #ff0000, #ff9500);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-size: 15em;
+  font-size: 15vw;
 }
 
 .URL-input {
-  align-self: center;
   border: none;
   border-radius: 5px;
   background-color: #343434;
-  width: 50%;
-  filter: drop-shadow(0px 0px 6px, #000, 25%);
+  width: 45%;
+  filter: drop-shadow(0px 0px 6px, #000, 100%);
 }
