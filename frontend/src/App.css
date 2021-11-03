@@ -17,7 +17,7 @@ body {
   background: linear-gradient(to right, #ff0000, #ff9500);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-size: 15vw;
+  font-size: 20vw;
   margin: 0;
 }
 
@@ -30,8 +30,15 @@ body {
   height: 4vh;
 }
 
-input[type="text"]::placeholder {
-  padding-left: 10px;
+.URL-input:focus {
+  color: #ffffff;
+  padding-left: 0.5vw;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+
+.URL-input::placeholder {
+  padding-left: 0.1vw;
   font-weight: bold;
   color: #747474;
 }
