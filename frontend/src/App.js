@@ -1,12 +1,15 @@
 import './App.css';
-
+import { useState } from 'react';
 
 function App() {
+  const [url, seturl] = useState('');
   return (
     <div className="Content">
       <h1 className="Logo">SECR</h1>
       <div className="Input-container">
-        <input className="URL-input" type="text" placeholder="Enter URL" /><input className="URL-submit" type="submit" value="Scan" />
+        <form onSubmit={console.log(url)}>
+          <input className="URL-input" value={url} type="text" placeholder="Enter URL" onInput={e => seturl(e.target.value)} /><input className="URL-submit" type="submit" value="Scan" />
+        </form>
       </div>
     </div>
   );
