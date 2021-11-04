@@ -21,6 +21,12 @@ body {
   margin: 0;
 }
 
+.Input-container {
+  display: flex;
+  width: 47vw;
+  align-content: center;
+}
+
 .URL-input {
   border: none;
   border-radius: 8px;
@@ -35,7 +41,6 @@ body {
 }
 
 .URL-submit {
-  margin-left: 40.5vw;
   border: none;
   border-radius: 8px;
   outline: none;
