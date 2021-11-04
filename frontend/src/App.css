@@ -34,8 +34,21 @@ body {
   font-size: 2.5vh;
 }
 
+.URL-submit {
+  margin-left: 40.5vw;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-image: linear-gradient(to right, #ff0000, #ff9500);
+  color: #ffffff;
+  width: 7vw;
+  height: 4vh;
+  font-size: 2.5vh;
+  font-weight: bold;
+}
+
 .URL-input::placeholder {
   padding-left: 0.1vw;
   font-weight: bold;
-  color: #747474;
+  color: linear-gradient(to right, #ff0000, #ff9500);
 }
