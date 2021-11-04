@@ -22,7 +22,7 @@ body {
 }
 
 .Input-container {
-  display: flex;
+  display: inline-block;
   width: 47vw;
   align-content: center;
 }
@@ -32,16 +32,18 @@ body {
   border-radius: 8px;
   outline: none;
   background-color: #343434;
-  width: 47vw;
   height: 4vh;
   color: #ffffff;
   padding-left: 0.5vw;
   font-weight: bold;
   font-size: 2.5vh;
+  width: 81%;
+  border: none;
 }
 
 .URL-submit {
   border: none;
+  float: right;
   border-radius: 8px;
   outline: none;
   background-image: linear-gradient(to right, #ff0000, #ff9500);
