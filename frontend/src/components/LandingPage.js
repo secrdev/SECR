@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function LandingPage() {
+export default function LandingPage() {
     const [url, seturl] = useState('');
     return (
         <div className="Content">
@@ -13,5 +13,3 @@ function LandingPage() {
         </div>
     );
 }
-
-export default LandingPage;
