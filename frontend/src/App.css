@@ -79,6 +79,7 @@ body {
   margin-top: 18vh;
   background-color: #2b2b2b;
   border-radius: 8px;
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.3));
 }
 
 .Table {
