@@ -71,3 +71,8 @@ body {
   font-weight: bold;
   color: linear-gradient(to right, #ff0000, #ff9500);
 }
+
+.Table {
+  width: 50vw;
+  justify-content: center;
+}
