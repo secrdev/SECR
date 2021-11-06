@@ -5,7 +5,7 @@ import 'react-circular-progressbar/dist/styles.css';
 export default function Dashboard() {
     return (
         <div className="Dashboard">
-            <div style={{ width: "15%", height: "15%"}}>
+            <div className="Progress-bar">
                 <CircularProgressbar value={25} text={'25%'} background={true} styles={{
                     root: {},
                     path: {

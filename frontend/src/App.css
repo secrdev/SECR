@@ -10,6 +10,11 @@ body {
   height: 100vh;
 }
 
+.Progress-bar {
+  padding-top: 5vh;
+  height: 20vh;
+}
+
 .Landing-page {
   display: flex;
   flex-direction: column;
