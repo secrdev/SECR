@@ -75,19 +75,19 @@ body {
 }
 
 .Table-container {
-  margin-top: 15vh;
+  margin-top: 18vh;
   background-color: #2b2b2b;
   border-radius: 8px;
 }
 
 .Table {
-  padding: 1.5vw;
+  padding: 1vw;
   width: 70vw;
   overflow-y: auto;
   height: 50vh;
   display: block;
-  text-align: center;
   justify-content: center;
+  text-align: center;
 }
 
 .Table thead th {
