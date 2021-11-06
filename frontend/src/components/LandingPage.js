@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function LandingPage() {
     const [url, seturl] = useState('');
     return (
-        <div className="Content">
+        <div className="Landing-page">
             <h1 className="Logo">SECR</h1>
             <div className="Input-container">
                 <form onSubmit={console.log(url)}>
