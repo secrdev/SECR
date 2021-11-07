@@ -110,6 +110,6 @@ table {
 }
 
 .Table::-webkit-scrollbar {
-  width: .5vw;
-  background-color: #252525;
+  width: 0vw;
+  height: 0vw;
 }
