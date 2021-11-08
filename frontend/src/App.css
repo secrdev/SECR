@@ -10,7 +10,6 @@ body {
   justify-content: center;
   height: 100vh;
   color: #ffffff;
-  padding-bottom: 5vh;
 }
 
 .Progress-bar {
@@ -34,6 +33,7 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-size: 18vw;
+  margin: 0;
   filter: drop-shadow(0 0.75rem 1rem rgba(0, 0, 1, 0.5));
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .Table-container {
-  margin-top: 23vh;
+  margin-top: 18vh;
   background-color: #2b2b2b;
   border-radius: 8px;
   filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 1, 0.3));
