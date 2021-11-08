@@ -15,7 +15,7 @@ type Report struct {
 var regexPatterns = map[string]string{
 	"cve":     `https://vulners.com/cve/CVE-\d{4}-\d{1,10}`,
 	"port":    `\d{0,5}\/tcp`,
-	"service": `/(?<=\_http-server-header:)[^\(*CR)]+/m`,
+	"service": `(?<=\_http-server-header:)[^\(*CR)]+`,
 }
 
 func ExecuteVulnscan(URL string) (Report, error) {
