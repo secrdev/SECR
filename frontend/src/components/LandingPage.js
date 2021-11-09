@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import QueryAPI from '../utils/QueryAPI';
 
 export default function LandingPage() {
     const [url, seturl] = useState('');
@@ -7,7 +8,7 @@ export default function LandingPage() {
             <h1 className="Logo">SECR</h1>
             <div className="Input-container">
                 <form onSubmit={console.log(url)}>
-                    <input className="URL-input" value={url} type="text" placeholder="Enter URL" onInput={e => seturl(e.target.value)} /><input className="URL-submit" type="submit" value="Scan" />
+                    <input className="URL-input" value={url} type="text" placeholder="Enter URL" onInput={e => seturl(e.target.value)} /><input className="URL-submit" type="submit" value="Scan" onClick={QueryAPI(url)} />
                 </form>
             </div>
         </div>
