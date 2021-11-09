@@ -2,12 +2,13 @@ import axios from 'axios';
 
 export default function QueryAPI(url) {
     if (url != null) {
-        axios.get({
-            url: `localhost:8080/?url=${url}`,
-            method: 'get',
-        }).then(function (response) {
+        axios.get('http://localhost:8080/', {
+            params: {
+                url: url,
+            }
+        }).then(Response => {
             console.log(response.data);
-        }).catch(function (error) {
+        }).catch(error => {
             console.log(error);
         });
     }
