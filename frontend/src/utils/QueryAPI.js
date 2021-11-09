@@ -6,7 +6,7 @@ export default function QueryAPI(url) {
             params: {
                 url: url,
             }
-        }).then(Response => {
+        }).then(response => {
             console.log(response.data);
         }).catch(error => {
             console.log(error);
