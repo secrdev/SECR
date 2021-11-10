@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 export default function Loadscreen() {
     return (
         <div className="Landing-page">
