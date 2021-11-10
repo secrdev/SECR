@@ -4,18 +4,7 @@ import QueryAPI from '../utils/QueryAPI';
 
 export default function Dashboard({ url }) {
     const res = QueryAPI(url);
-    const displayResInTable = ({ res }) => {
-        res.vulns.map((vuln, index) => {
-            return (
-                <tr key={index}>
-                    <td>{res.port}</td>
-                    <td>{res.service}</td>
-                    <td>{vuln}</td>
-                    <td>lol</td>
-                </tr>
-            )
-        })
-    }
+    console.log(res);
     return (
         <div className="Dashboard">
             <div className="Progress-bar">
@@ -48,4 +37,17 @@ export default function Dashboard({ url }) {
             </div>
         </div>
     )
+}
+
+const displayResInTable = ({ res }) => {
+    res.vulns.map((vuln, index) => {
+        return (
+            <tr key={index}>
+                <td>{res.port}</td>
+                <td>{res.service}</td>
+                <td>{vuln}</td>
+                <td>lol</td>
+            </tr>
+        )
+    })
 }
