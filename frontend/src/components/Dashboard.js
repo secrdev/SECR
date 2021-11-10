@@ -5,6 +5,18 @@ import QueryAPI from '../utils/QueryAPI';
 export default function Dashboard({ url }) {
     const res = QueryAPI(url);
     console.log(res);
+    const DisplayResInTable = ({ res }) => {
+        res.vulns.map((vuln, index) => {
+            return (
+                <tr key={index}>
+                    <td>{res.port}</td>
+                    <td>{res.service}</td>
+                    <td>{vuln}</td>
+                    <td>lol</td>
+                </tr>
+            )
+        })
+    }
     return (
         <div className="Dashboard">
             <div className="Progress-bar">
@@ -32,22 +44,11 @@ export default function Dashboard({ url }) {
                         <th>Vulnerability</th>
                         <th>Description</th>
                     </tr>
-                    <displayResInTable res={res} />
+                    <DisplayResInTable res={res} />
                 </table>
             </div>
         </div>
     )
 }
 
-const displayResInTable = ({ res }) => {
-    res.vulns.map((vuln, index) => {
-        return (
-            <tr key={index}>
-                <td>{res.port}</td>
-                <td>{res.service}</td>
-                <td>{vuln}</td>
-                <td>lol</td>
-            </tr>
-        )
-    })
-}
+
