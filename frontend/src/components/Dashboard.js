@@ -3,7 +3,6 @@ import QueryAPI from '../utils/QueryAPI';
 
 export default function Dashboard({ url }) {
     const res = QueryAPI(url);
-    console.log(res);
     const DisplayResInTable = ({ res }) => {
         res.vulns.map((vuln, index) => {
             return (
