@@ -7,6 +7,7 @@ import (
 )
 
 func HandleReportRequest(w http.ResponseWriter, r *http.Request) {
+	enableCors(&w)
 	if url := r.URL.Query().Get("url"); url != "" {
 		for name, values := range r.Header {
 			log.Println(name, values)
@@ -18,4 +19,8 @@ func HandleReportRequest(w http.ResponseWriter, r *http.Request) {
 		}
 		json.NewEncoder(w).Encode(scan)
 	}
+}
+
+func enableCors(w *http.ResponseWriter) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
 }
