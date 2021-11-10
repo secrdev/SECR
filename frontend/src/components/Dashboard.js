@@ -1,6 +1,6 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import QueryAPI from '../../utils/QueryAPI';
+import QueryAPI from '../utils/QueryAPI';
 
 export default function Dashboard({ url }) {
     const res = QueryAPI(url);
