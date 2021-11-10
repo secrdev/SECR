@@ -1,15 +1,14 @@
 import axios from 'axios';
 
-export default function QueryAPI(url) {
+export default async function QueryAPI(url) {
     if (url != null) {
-        axios.get('http://localhost:8080/', {
-            params: {
-                url: url,
+        try {
+            const response = await axios.get('http://localhost:8080', { params: { url: url } });
+            if (response.status === 200) {
+                return response.data;
             }
-        }).then(response => {
-            console.log(response.data);
-        }).catch(error => {
+        } catch (error) {
             console.log(error);
-        });
+        }
     }
 }
