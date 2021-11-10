@@ -37,6 +37,15 @@ body {
   filter: drop-shadow(0 0.75rem 1rem rgba(0, 0, 1, 0.5));
 }
 
+.Logo-loading {
+  background: linear-gradient(to right, #138a00, #47ef8a);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 18vw;
+  margin: 0;
+  filter: drop-shadow(0 0.75rem 1rem rgba(0, 0, 1, 0.5));
+}
+
 .Input-container {
   display: inline-block;
   width: 47vw;
