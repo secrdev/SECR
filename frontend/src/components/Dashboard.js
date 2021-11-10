@@ -1,5 +1,4 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 import QueryAPI from '../utils/QueryAPI';
 
 export default function Dashboard({ url }) {
@@ -14,9 +13,9 @@ export default function Dashboard({ url }) {
                     <td>{vuln}</td>
                     <td>lol</td>
                 </tr>
-            )
-        })
-    }
+            );
+        });
+    };
     return (
         <div className="Dashboard">
             <div className="Progress-bar">
@@ -48,7 +47,5 @@ export default function Dashboard({ url }) {
                 </table>
             </div>
         </div>
-    )
+    );
 }
-
-
