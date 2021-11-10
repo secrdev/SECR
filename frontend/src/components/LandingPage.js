@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import QueryAPI from '../utils/QueryAPI';
+import Dashboard from './Dashboard';
 
 export default function LandingPage() {
     const [url, seturl] = useState('');
@@ -10,7 +10,9 @@ export default function LandingPage() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        QueryAPI(url).then(res => console.log(res));
+        return (
+            <Dashboard url={url} />
+        )
     }
 
     return (
