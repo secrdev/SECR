@@ -43,6 +43,7 @@ export default function Dashboard({ url }) {
                         <th>Vulnerability</th>
                         <th>Description</th>
                     </tr>
+                    <displayResInTable res={res} />
                 </table>
             </div>
         </div>
