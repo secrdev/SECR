@@ -1,20 +1,9 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import QueryAPI from '../utils/QueryAPI';
 
-export default function Dashboard({ url }) {
-    const res = QueryAPI(url);
-    const DisplayResInTable = ({ res }) => {
-        res.vulns.map((vuln, index) => {
-            return (
-                <tr key={index}>
-                    <td>{res.port}</td>
-                    <td>{res.service}</td>
-                    <td>{vuln}</td>
-                    <td>lol</td>
-                </tr>
-            );
-        });
-    };
+export default function Dashboard({url}) {
+    const res = QueryAPI("127.0.0.1");
+    console.log(res)
     return (
         <div className="Dashboard">
             <div className="Progress-bar">
@@ -42,9 +31,56 @@ export default function Dashboard({ url }) {
                         <th>Vulnerability</th>
                         <th>Description</th>
                     </tr>
-                    <DisplayResInTable res={res} />
+                    <tr>
+                        <td>80</td>
+                        <td>Apache HTTP 5.0</td>
+                        <td>CVE-2021-41524</td>
+                        <td>While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server. This requires a specially crafted request. The vulnerability was recently introduced in version 2.4.49. No exploit is known to the project.</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>Apache HTTP 5.0</td>
+                        <td>CVE-2021-41524</td>
+                        <td>While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server. This requires a specially crafted request. The vulnerability was recently introduced in version 2.4.49. No exploit is known to the project.</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>Apache HTTP 5.0</td>
+                        <td>CVE-2021-41524</td>
+                        <td>While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server. This requires a specially crafted request. The vulnerability was recently introduced in version 2.4.49. No exploit is known to the project.</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>Apache HTTP 5.0</td>
+                        <td>CVE-2021-41524</td>
+                        <td>While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server. This requires a specially crafted request. The vulnerability was recently introduced in version 2.4.49. No exploit is known to the project.</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>Apache HTTP 5.0</td>
+                        <td>CVE-2021-41524</td>
+                        <td>While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server. This requires a specially crafted request. The vulnerability was recently introduced in version 2.4.49. No exploit is known to the project.</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>Apache HTTP 5.0</td>
+                        <td>CVE-2021-41524</td>
+                        <td>While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server. This requires a specially crafted request. The vulnerability was recently introduced in version 2.4.49. No exploit is known to the project.</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>Apache HTTP 5.0</td>
+                        <td>CVE-2021-41524</td>
+                        <td>While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server. This requires a specially crafted request. The vulnerability was recently introduced in version 2.4.49. No exploit is known to the project.</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>Apache HTTP 5.0</td>
+                        <td>CVE-2021-41524</td>
+                        <td>While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server. This requires a specially crafted request. The vulnerability was recently introduced in version 2.4.49. No exploit is known to the project.</td>
+                    </tr>
                 </table>
             </div>
         </div>
-    );
-}
+    )
+};
