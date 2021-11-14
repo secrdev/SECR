@@ -1,7 +1,7 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import QueryAPI from '../utils/QueryAPI';
 
-export default function Dashboard({url}) {
+export default function Dashboard({ url }) {
     const res = QueryAPI("127.0.0.1");
     console.log(res)
     return (
@@ -20,7 +20,7 @@ export default function Dashboard({url}) {
                     },
                     background: {
                         fill: '#2b2b2b',
-                    }
+                    },
                 }} />
             </div>
             <div className="Table-container">
