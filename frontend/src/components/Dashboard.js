@@ -3,7 +3,6 @@ import QueryAPI from '../utils/QueryAPI';
 
 export default function Dashboard({ url }) {
     const res = QueryAPI("127.0.0.1");
-    console.log(res)
     return (
         <div className="Dashboard">
             <div className="Progress-bar">
