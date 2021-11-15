@@ -50,6 +50,7 @@ body {
   display: inline-block;
   width: 47vw;
   align-content: center;
+  filter: drop-shadow(0 1.75rem 1rem rgba(0, 0, 1, 0.5));
 }
 
 .URL-input {
@@ -64,7 +65,6 @@ body {
   font-size: 2.5vh;
   width: 81%;
   border: none;
-  filter: drop-shadow(0 1.75rem 1rem rgba(0, 0, 1, 0.55));
 }
 
 .URL-submit {
@@ -78,7 +78,6 @@ body {
   height: 4vh;
   font-size: 2.5vh;
   font-weight: bold;
-  filter: drop-shadow(0 1.75rem 1rem rgba(0, 0, 1, 0.55));
 }
 
 .URL-input::placeholder {
