@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-export default function QueryAPI(url) {
+export default async function QueryAPI(url) {
     if (url != null) {
-        axios.get('http://localhost:8080', { params: { url: url } }).then((response) => {
-            console.log(response.data);
+        await axios.get('http://localhost:8080', { params: { url: url } }).then((response) => {
+            return response.data;
         }).catch(error => {
             console.log(error);
         });
