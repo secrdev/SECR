@@ -1,17 +1,22 @@
 import axios from 'axios';
 
-export default async function QueryAPI(url) {
+export default async function QueryAPI({ url }) {
     if (url != null) {
         await axios.get('http://localhost:8080', { params: { url: url } }).then((response) => {
-            response.data.map((listValue, index) => {
-                return (
-                    <tr key={index}>
-                        <td>{listValue.port}</td>
-                        <td>{listValue.service}</td>
-                        <td>{listValue.vulns}</td>
-                    </tr>
-                )
-            });
+            const data = response.data;
+            console.log(data);
+            return (
+                <tbody>
+                    {data.map((vuln) => (
+                        <tr key={vuln.id}>
+                            <td>{response.data.port}</td>
+                            <td>{response.data.service}</td>
+                            <td>{vuln}</td>
+                            <td>Yaay</td>
+                        </tr>
+                    ))}
+                </tbody>
+            );
         }).catch(error => {
             console.log(error);
         });
