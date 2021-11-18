@@ -100,6 +100,8 @@ body {
   height: 50vh;
   display: block;
   text-align: center;
+  align-self: center;
+  align-items: center;
 }
 
 .Table thead th {

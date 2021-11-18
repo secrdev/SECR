@@ -43,7 +43,7 @@ export default function Dashboard({ url }) {
                                 <td>{data.port}</td>
                                 <td>{data.service}</td>
                                 <td>{vuln}</td>
-                                <td>Yaay</td>
+                                <td>ap_escape_quotes() may write beyond the end of a buffer when given malicious input. No included modules pass untrusted data to these functions, but third-party / external modules may. This issue affects Apache HTTP Server 2.4.48 and earlier.</td>
                             </tr>
                         ))}
                     </tbody>}
