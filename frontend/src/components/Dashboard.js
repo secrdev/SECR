@@ -1,7 +1,15 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
-import QueryAPI from '../utils/QueryAPI';
+import axios from 'axios';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-export default function Dashboard({url}) {
+export default function Dashboard({ url }) {
+    const { data, isLoading, error } = useFetchData({ url: "127.0.0.1" })
+
+    if (error) {
+        console.log(error);
+    }
+
     return (
         <div className="Dashboard">
             <div className="Progress-bar">
@@ -29,9 +37,51 @@ export default function Dashboard({url}) {
                         <th>Vulnerability</th>
                         <th>Description</th>
                     </tr>
-                    <QueryAPI url={"127.0.0.1"} />   
+                    {isLoading ? <h4>...</h4> : <tbody>
+                        {data.map((vuln, id) => (
+                            <tr key={id}>
+                                <td>{data.port}</td>
+                                <td>{data.service}</td>
+                                <td>{vuln}</td>
+                                <td>Yaay</td>
+                            </tr>
+                        ))}
+                    </tbody>}
                 </table>
             </div>
         </div>
     )
 };
+
+function useFetchData({ url }) {
+    const [data, setData] = useState < DataType | null > (null)
+    const [isLoading, setLoading] = useState < boolean > (true)
+    const [error, setError] = useState < string | null > (null)
+
+    // Useless tbh since the arg is required up there
+    if (!url) {
+        return 'url is required'
+    }
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true)
+                const res = await axios.get('http://localhost:8080', { params: { url: url } })
+                setData(res.data.vulns)
+            } catch (err) {
+                setError(err)
+            } finally {
+                setLoading(false)
+            }
+        }
+
+        fetchData()
+    }, [])
+
+    return {
+        data,
+        isLoading,
+        error
+    }
+}
