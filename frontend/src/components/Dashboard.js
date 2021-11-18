@@ -38,7 +38,7 @@ export default function Dashboard({ url }) {
                         <th>Description</th>
                     </tr>
                     {isLoading ? <h4>...</h4> : <tbody>
-                        {data.map((vuln, id) => (
+                        {data.vulns.map((vuln, id) => (
                             <tr key={id}>
                                 <td>{data.port}</td>
                                 <td>{data.service}</td>
@@ -54,21 +54,20 @@ export default function Dashboard({ url }) {
 };
 
 function useFetchData({ url }) {
-    const [data, setData] = useState < DataType | null > (null)
-    const [isLoading, setLoading] = useState < boolean > (true)
-    const [error, setError] = useState < string | null > (null)
-
-    // Useless tbh since the arg is required up there
-    if (!url) {
-        return 'url is required'
-    }
+    const [data, setData] = useState(null)
+    const [isLoading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 setLoading(true)
                 const res = await axios.get('http://localhost:8080', { params: { url: url } })
-                setData(res.data.vulns)
+                setData({
+                    port: res.data.port,
+                    service: res.data.service,
+                    vulns: res.data.vulns,
+                })
             } catch (err) {
                 setError(err)
             } finally {
