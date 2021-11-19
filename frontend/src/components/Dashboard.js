@@ -8,6 +8,8 @@ import Loadscreen from './Loadscreen';
 export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: "127.0.0.1" })
 
+    const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
+
     if (error) {
         console.log(error);
     }
@@ -17,7 +19,7 @@ export default function Dashboard({ url }) {
             {!isLoading ? (
                 <>
                     <div className="Progress-bar">
-                        <CircularProgressbar value={securityScore} text={`${securityScore}%`} background={true} styles={{
+                        <CircularProgressbar value={score} text={`${score}%`} background={true} styles={{
                             root: {},
                             path: {
                                 stroke: `rgba(255, 00, 00)`,
