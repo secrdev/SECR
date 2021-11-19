@@ -17,6 +17,7 @@ body {
   width: 20vw;
   height: 18vh;
   filter: drop-shadow(0 0.75rem 1rem rgba(0, 0, 1, 0.35));
+  text-align: center;
 }
 
 .Landing-page {

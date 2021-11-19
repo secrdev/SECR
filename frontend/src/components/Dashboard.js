@@ -18,6 +18,7 @@ export default function Dashboard({ url }) {
                 <CircularProgressbar
                     value={percentage}
                     text={`${percentage}%`}
+                    background={true}
                     styles={{
                         root: {},
                         path: {
@@ -27,14 +28,15 @@ export default function Dashboard({ url }) {
                             transformOrigin: 'center center',
                         },
                         trail: {
-                            stroke: '#2B2B2B',
+                            stroke: '#2b2b2b',
+                            strokeLinecap: 'round',
                             transformOrigin: 'center center',
                         },
                         text: {
                             fill: '#ff0000',
                         },
                         background: {
-                            fill: '#2B2B2B',
+                            fill: '#2b2b2b',
                         },
                     }}
                 />
@@ -47,7 +49,7 @@ export default function Dashboard({ url }) {
                         <th>Vulnerability</th>
                         <th>Description</th>
                     </tr>
-                    {isLoading ? <h4>...</h4> : <tbody>
+                    {isLoading ? <h4>Loading...</h4> : <tbody>
                         {data.vulns.map((vuln, id) => (
                             <tr key={id}>
                                 <td>{data.port}</td>
