@@ -3,9 +3,12 @@ import 'react-circular-progressbar/dist/styles.css';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import CalculateSecurityScore from '../utils/CalculateSecurityScore';
 
 export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: "127.0.0.1" })
+
+    const score = isLoading ? null : CalculateSecurityScore(data.port.length, data.vulns.length);
 
     if (error) {
         console.log(error);
@@ -14,7 +17,7 @@ export default function Dashboard({ url }) {
     return (
         <div className="Dashboard">
             <div className="Progress-bar">
-                <CircularProgressbar value={25} text={'25%'} background={true} styles={{
+                <CircularProgressbar value={score} text={`${score}%`} background={true} styles={{
                     root: {},
                     path: {
                         stroke: `rgba(255, 00, 00)`,
