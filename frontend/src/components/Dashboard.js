@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import CalculateSecurityScore from '../utils/CalculateSecurityScore';
 
 export default function Dashboard({ url }) {
-    const { data, isLoading, error } = useFetchData({ url: "127.0.0.1" })
+    const { data, isLoading, error } = useFetchData({ url: url })
 
     const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
 
