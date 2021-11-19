@@ -42,7 +42,7 @@ export default function Dashboard({ url }) {
                                 <th>Vulnerability</th>
                                 <th>Description</th>
                             </tr>
-                            {isLoading ? <h4>Loading...</h4> : <tbody>
+                            {<tbody>
                                 {data.vulns.map((vuln, id) => (
                                     <tr key={id}>
                                         <td>{data.port}</td>
