@@ -14,7 +14,6 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/loading" element={<Loadscreen />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
