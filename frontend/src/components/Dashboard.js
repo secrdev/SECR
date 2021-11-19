@@ -1,8 +1,7 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import axios from 'axios';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import CalculateSecurityScore from '../utils/CalculateSecurityScore';
 
 export default function Dashboard({ url }) {
