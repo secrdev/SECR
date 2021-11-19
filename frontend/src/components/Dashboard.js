@@ -70,7 +70,7 @@ function useFetchData({ url }) {
         const fetchData = async () => {
             try {
                 setLoading(true)
-                const res = await axios.get('http://localhost:8080', { params: { url: url } })
+                const res = await axios.get('http://localhost:15411', { params: { url: url } })
                 setData({
                     port: res.data.port,
                     service: res.data.service,
