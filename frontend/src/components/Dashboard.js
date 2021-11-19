@@ -1,12 +1,11 @@
-import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
 export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: "127.0.0.1" })
-
-    const percentage = 25;
 
     if (error) {
         console.log(error);
@@ -15,31 +14,21 @@ export default function Dashboard({ url }) {
     return (
         <div className="Dashboard">
             <div className="Progress-bar">
-                <CircularProgressbar
-                    value={percentage}
-                    text={`${percentage}%`}
-                    background={true}
-                    styles={{
-                        root: {},
-                        path: {
-                            stroke: `#ff0000`,
-                            strokeLinecap: 'round',
-                            transition: 'stroke-dashoffset 0.5s ease 0s',
-                            transformOrigin: 'center center',
-                        },
-                        trail: {
-                            stroke: '#2b2b2b',
-                            strokeLinecap: 'round',
-                            transformOrigin: 'center center',
-                        },
-                        text: {
-                            fill: '#ff0000',
-                        },
-                        background: {
-                            fill: '#2b2b2b',
-                        },
-                    }}
-                />
+                <CircularProgressbar value={25} text={'25%'} background={true} styles={{
+                    root: {},
+                    path: {
+                        stroke: `rgba(255, 00, 00)`,
+                    },
+                    trail: {
+                        stroke: '#2b2b2b',
+                    },
+                    text: {
+                        fill: '#ff0000',
+                    },
+                    background: {
+                        fill: '#2b2b2b',
+                    }
+                }} />
             </div>
             <div className="Table-container">
                 <table className="Table">
