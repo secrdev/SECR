@@ -10,8 +10,10 @@ export default function LandingPage() {
     }
 
     function handleSubmit(e) {
-        e.preventDefault();
-        setSubmit(true);
+        if (url.trim() !== '') {
+            e.preventDefault();
+            setSubmit(true);
+        }
     }
 
     return (
@@ -21,7 +23,7 @@ export default function LandingPage() {
                     <h1 className="Logo">SECR</h1>
                     <div className="Input-container">
                         <form onSubmit={handleSubmit}>
-                            <input className="URL-input" value={url} type="text" placeholder="Enter URL" onChange={handleUrlChange} /><input className="URL-submit" type="submit" value="Scan" />
+                            <input className="URL-input" value={url} type="text" placeholder="Enter URL" onChange={handleUrlChange} /><input className="URL-submit" type="submit" value="Scan" disabled={url.trim() === ''} />
                         </form>
                     </div>
                 </div>
