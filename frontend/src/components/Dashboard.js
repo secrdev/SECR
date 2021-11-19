@@ -8,7 +8,7 @@ import CalculateSecurityScore from '../utils/CalculateSecurityScore';
 export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: "127.0.0.1" })
 
-    const score = isLoading ? null : CalculateSecurityScore(data.port.length, data.vulns.length);
+    const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
 
     if (error) {
         console.log(error);
