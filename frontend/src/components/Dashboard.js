@@ -6,12 +6,7 @@ import CalculateSecurityScore from '../utils/CalculateSecurityScore';
 import Loadscreen from './Loadscreen';
 
 export default function Dashboard({ url }) {
-    const { data, isLoading, error } = useFetchData({ url: url })
-    const [securityScore, setSecurityScore] = useState(null)
-
-    useEffect(() => {
-        setSecurityScore(CalculateSecurityScore(1, data.vulns.length));
-    }, [!isLoading, data]);
+    const { data, isLoading, error } = useFetchData({ url: "127.0.0.1" })
 
     if (error) {
         console.log(error);
