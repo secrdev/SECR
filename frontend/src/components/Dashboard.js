@@ -7,8 +7,11 @@ import Loadscreen from './Loadscreen';
 
 export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: url })
+    const [securityScore, setSecurityScore] = useState(null)
 
-    const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
+    useEffect(() => {
+        setSecurityScore(CalculateSecurityScore(1, data.vulns.length));
+    }, [!isLoading, data]);
 
     if (error) {
         console.log(error);
@@ -19,7 +22,7 @@ export default function Dashboard({ url }) {
             {!isLoading ? (
                 <>
                     <div className="Progress-bar">
-                        <CircularProgressbar value={score} text={`${score}%`} background={true} styles={{
+                        <CircularProgressbar value={securityScore} text={`${securityScore}%`} background={true} styles={{
                             root: {},
                             path: {
                                 stroke: `rgba(255, 00, 00)`,
