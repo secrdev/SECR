@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "electron public/main.js"
+    "electron-dev": "electron ."
   },
   "eslintConfig": {
     "extends": [
