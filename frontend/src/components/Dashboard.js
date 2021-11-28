@@ -48,7 +48,7 @@ export default function Dashboard({ url }) {
                                         <td>{data.port}</td>
                                         <td>{data.service.replace('_http-server-header:', '')}</td>
                                         <td>{vuln.replace('https://vulners.com/cve/', '')}</td>
-                                        <td>ap_escape_quotes() may write beyond the end of a buffer when given malicious input. No included modules pass untrusted data to these functions, but third-party / external modules may. This issue affects Apache HTTP Server 2.4.48 and earlier.</td>
+                                        <td>{getDescription(vuln)}</td>
                                     </tr>
                                 ))}
                             </tbody>}
@@ -69,7 +69,7 @@ function useFetchData({ url }) {
         const fetchData = async () => {
             try {
                 setLoading(true)
-                const res = await axios.get('http://localhost:15411', { params: { url: url } })
+                const res = await axios.get('http://localhost:15411', { params: { url: url } });
                 setData({
                     port: res.data.port,
                     service: res.data.service,
@@ -90,4 +90,9 @@ function useFetchData({ url }) {
         isLoading,
         error
     }
+}
+
+function getDescription(vuln) {
+    const res = await axios.get(`https://access.redhat.com/labs/securitydataapi/cve/${vuln}`);
+    return res.data.details;
 }
