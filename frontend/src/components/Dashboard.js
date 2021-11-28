@@ -16,52 +16,50 @@ export default function Dashboard({ url }) {
         console.log(error);
     }
 
-    useEffect(() => {
-        return (
-            <div className="Dashboard">
-                {!isLoading ? (
-                    <>
-                        <div className="Progress-bar">
-                            <CircularProgressbar value={score} text={`${score}%`} background={true} styles={{
-                                root: {},
-                                path: {
-                                    stroke: `rgba(255, 00, 00)`,
-                                },
-                                trail: {
-                                    stroke: '#2b2b2b',
-                                },
-                                text: {
-                                    fill: '#ff0000',
-                                },
-                                background: {
-                                    fill: '#2b2b2b',
-                                }
-                            }} />
-                        </div><div className="Table-container">
-                            <table className="Table">
-                                <tr>
-                                    <th>Port</th>
-                                    <th>Service</th>
-                                    <th>Vulnerability</th>
-                                    <th>Description</th>
-                                </tr>
-                                {<tbody>
-                                    {data.vulns.map((vuln, id) => (
-                                        <tr key={id}>
-                                            <td>{data.port}</td>
-                                            <td>{data.service.replace('_http-server-header:', '')}</td>
-                                            <td>{vuln.replace('https://vulners.com/cve/', '')}</td>
-                                            <td>{data.descriptions[id]}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>}
-                            </table>
-                        </div>
-                    </>
-                ) : (<Loadscreen />)}
-            </div>
-        )
-    }, [data, isLoading, score]);
+    return (
+        <div className="Dashboard">
+            {!isLoading ? (
+                <>
+                    <div className="Progress-bar">
+                        <CircularProgressbar value={score} text={`${score}%`} background={true} styles={{
+                            root: {},
+                            path: {
+                                stroke: `rgba(255, 00, 00)`,
+                            },
+                            trail: {
+                                stroke: '#2b2b2b',
+                            },
+                            text: {
+                                fill: '#ff0000',
+                            },
+                            background: {
+                                fill: '#2b2b2b',
+                            }
+                        }} />
+                    </div><div className="Table-container">
+                        <table className="Table">
+                            <tr>
+                                <th>Port</th>
+                                <th>Service</th>
+                                <th>Vulnerability</th>
+                                <th>Description</th>
+                            </tr>
+                            {<tbody>
+                                {data.vulns.map((vuln, id) => (
+                                    <tr key={id}>
+                                        <td>{data.port}</td>
+                                        <td>{data.service.replace('_http-server-header:', '')}</td>
+                                        <td>{vuln.replace('https://vulners.com/cve/', '')}</td>
+                                        <td>{data.descriptions[id]}</td>
+                                    </tr>
+                                ))}
+                            </tbody>}
+                        </table>
+                    </div>
+                </>
+            ) : (<Loadscreen />)}
+        </div>
+    )
 };
 
 function useFetchData({ url }) {
