@@ -5,7 +5,6 @@ import './App.css';
 import reportWebVitals from './reportWebVitals';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import Dashboard from './components/Dashboard';
 
 ReactDOM.render(
   <React.StrictMode>

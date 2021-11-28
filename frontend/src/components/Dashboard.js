@@ -6,11 +6,9 @@ import CalculateSecurityScore from '../utils/CalculateSecurityScore';
 import Loadscreen from './Loadscreen';
 
 export default function Dashboard({ url }) {
-    const { data, isLoading, error } = useFetchData({ url: url })
+    const { data, isLoading, error } = useFetchData({ url: url });
 
     const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
-
-    console.log(data);
 
     if (error) {
         console.log(error);
@@ -38,12 +36,14 @@ export default function Dashboard({ url }) {
                         }} />
                     </div><div className="Table-container">
                         <table className="Table">
-                            <tr>
-                                <th>Port</th>
-                                <th>Service</th>
-                                <th>Vulnerability</th>
-                                <th>Description</th>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <th>Port</th>
+                                    <th>Service</th>
+                                    <th>Vulnerability</th>
+                                    <th>Description</th>
+                                </tr>
+                            </tbody>
                             {<tbody>
                                 {data.vulns.map((vuln, id) => (
                                     <tr key={id}>
@@ -87,7 +87,7 @@ function useFetchData({ url }) {
         }
 
         fetchData();
-    }, [])
+    }, [url]);
 
     return {
         data,
