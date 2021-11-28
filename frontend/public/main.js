@@ -29,4 +29,4 @@ app.on('activate', () => {
     }
 })
 
-execSync('../../runapi.sh');
+execSync('./runapi.sh');
