@@ -9,7 +9,6 @@ export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: url })
 
     const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
-    console.log(score);
 
     if (error) {
         console.log(error);
