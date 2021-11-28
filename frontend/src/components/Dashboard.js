@@ -48,7 +48,7 @@ export default function Dashboard({ url }) {
                                         <td>{data.port}</td>
                                         <td>{data.service.replace('_http-server-header:', '')}</td>
                                         <td>{vuln.replace('https://vulners.com/cve/', '')}</td>
-                                        <td>{data.descriptions[id]}</td>
+                                        <td>{getDescription(vuln)}</td>
                                     </tr>
                                 ))}
                             </tbody>}
@@ -74,7 +74,6 @@ function useFetchData({ url }) {
                     port: res.data.port,
                     service: res.data.service,
                     vulns: res.data.vulns,
-                    descriptions: getDescriptions(res.data.vulns),
                 })
             } catch (err) {
                 setError(err)
@@ -93,12 +92,7 @@ function useFetchData({ url }) {
     }
 }
 
-function getDescriptions(vulns) {
-    const result = [];
-    for (let vuln of vulns) {
-        axios.get(`https://olbat.github.io/nvdcve/${vuln.replace('https://vulners.com/cve/', '')}.json`).then(res => {
-            result.push(res.data.cve.description.description_data[0].value);
-        });
-    }
-    return result;
+function getDescription(vuln) {
+    const res = await axios.get(`https://access.redhat.com/labs/securitydataapi/cve/${vuln}`);
+    return res.data.details;
 }
