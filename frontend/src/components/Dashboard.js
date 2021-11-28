@@ -10,8 +10,6 @@ export default function Dashboard({ url }) {
 
     const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
 
-    console.log(data)
-
     if (error) {
         console.log(error);
     }
@@ -50,7 +48,7 @@ export default function Dashboard({ url }) {
                                         <td>{data.port}</td>
                                         <td>{data.service.replace('_http-server-header:', '')}</td>
                                         <td>{vuln.replace('https://vulners.com/cve/', '')}</td>
-                                        <td>{data.descriptions[id]}</td>
+                                        <td>Exim supports the use of multiple \"-p\" command line arguments which are malloc()'ed and never free()'ed, used in conjunction with other issues allows attackers to cause arbitrary code execution. This affects exim version 4.89 and earlier. Please note that at this time upstream has released a patch (commit 65e061b76867a9ea7aeeb535341b790b90ae6c21), but it is not known if a new point release is available that addresses this issue at this time.</td>
                                     </tr>
                                 ))}
                             </tbody>}
@@ -72,12 +70,12 @@ function useFetchData({ url }) {
             try {
                 setLoading(true)
                 const res = await axios.get('http://localhost:15411', { params: { url: url } });
-                const descriptions = await getDescriptions(res.data.vulns);
+                // const descriptions = await getDescriptions(res.data.vulns);
                 setData({
                     port: res.data.port,
                     service: res.data.service,
                     vulns: res.data.vulns,
-                    descriptions: descriptions,
+                    // descriptions: descriptions,
                 })
             } catch (err) {
                 setError(err)
