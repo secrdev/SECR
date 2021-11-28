@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron');
+const execSync = require('child_process').execSync;
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -34,3 +35,4 @@ app.on('activate', () => {
     }
 })
 
+execSync('../../runapi.sh');
