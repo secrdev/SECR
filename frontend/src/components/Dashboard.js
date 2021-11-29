@@ -10,8 +10,6 @@ export default function Dashboard({ url }) {
 
     const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
 
-    console.log(data.descriptions);
-
     if (error) {
         console.log(error);
     }
