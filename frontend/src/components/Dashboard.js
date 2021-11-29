@@ -1,7 +1,7 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState, useEffect  } from 'react';
 import CalculateSecurityScore from '../utils/CalculateSecurityScore';
 import Loadscreen from './Loadscreen';
 
@@ -9,6 +9,8 @@ export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: url });
 
     const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
+
+    console.log(data.descriptions);
 
     if (error) {
         console.log(error);
