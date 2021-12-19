@@ -73,7 +73,7 @@ function useFetchData({ url }) {
             try {
                 setLoading(true);
                 const res = await axios.get('http://localhost:15411', { params: { url: url } });
-                const descriptions = getDescriptions(res.data.vulns);
+                const descriptions = await getDescriptions(res.data.vulns);
                 console.log(descriptions)
                 setData({
                     port: res.data.port,
@@ -98,7 +98,7 @@ function useFetchData({ url }) {
     };
 }
 
-function getDescriptions(vulns) {
+async function getDescriptions(vulns) {
     const result = [];
     for (let vuln of vulns) {
         axios.get(`https://olbat.github.io/nvdcve/${vuln.replace('https://vulners.com/cve/', '')}.json`).then(res => {
