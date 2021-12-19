@@ -16,7 +16,7 @@ export default function Dashboard({ url }) {
 
     return (
         <div className="Dashboard">
-            {!isLoading ? (
+            {!isLoading && data.descriptions !== null ? (
                 <>
                     <div className="Progress-bar">
                         <CircularProgressbar value={score} text={`${score}%`} background={true} styles={{
