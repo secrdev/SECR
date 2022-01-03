@@ -1,7 +1,7 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import axios from 'axios';
-import { useState, useEffect  } from 'react';
+import { useState, useEffect } from 'react';
 import CalculateSecurityScore from '../utils/CalculateSecurityScore';
 import Loadscreen from './Loadscreen';
 
@@ -100,10 +100,10 @@ function useFetchData({ url }) {
 
 async function getDescriptions(vulns) {
     const result = [];
-    for (let vuln of vulns) {
+    vulns.forEach((vuln) => {
         axios.get(`https://olbat.github.io/nvdcve/${vuln.replace('https://vulners.com/cve/', '')}.json`).then(res => {
             result.push(res.data.cve.description.description_data[0].value);
         });
-    }
+    })
     return result;
 }
