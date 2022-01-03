@@ -49,9 +49,8 @@ export default function Dashboard({ url }) {
                                     <tr key={id}>
                                         <td>{data.port}</td>
                                         <td>{data.service.replace('_http-server-header:', '')}</td>
-                                        <td>{vuln.replace('https://vulners.com/cve/', '')}</td>
+                                        <td><a href={vuln}>{vuln.replace('https://vulners.com/cve/', '')}</a></td>
                                         <td>{data.descriptions[id]}</td>
-                                        {console.log(data.descriptions[id])}
                                     </tr>
                                 ))}
                             </tbody>}

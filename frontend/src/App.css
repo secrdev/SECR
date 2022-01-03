@@ -118,3 +118,9 @@ table {
   width: 0vw;
   height: 0vw;
 }
+
+a {
+  text-decoration: underline;
+  color: #ffffff;
+  text-align: center;
+}
