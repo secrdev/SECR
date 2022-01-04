@@ -98,9 +98,10 @@ body {
   align-items: center;
 }
 
-.Table thead th {
-  position: sticky;
-  top: 0;
+.Table-header {
+  background: #ff0000;
+  color: #ffffff;
+  text-align: left;
 }
 
 .Table th,
