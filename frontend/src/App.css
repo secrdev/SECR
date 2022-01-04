@@ -93,7 +93,7 @@ body {
   overflow-y: auto;
   height: 50vh;
   display: block;
-  text-align: center;
+  text-align: left;
   align-self: center;
   align-items: center;
 }
