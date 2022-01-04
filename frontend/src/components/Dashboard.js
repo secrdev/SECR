@@ -73,6 +73,7 @@ function useFetchData({ url }) {
                 setLoading(true);
                 const res = await axios.get('http://localhost:15411', { params: { url: url } });
                 const descriptions = await getDescriptions(res.data.vulns);
+                console.log(descriptions);
                 setData({
                     port: res.data.port,
                     service: res.data.service,
