@@ -84,19 +84,19 @@ body {
 .Table-container {
   margin-top: 25vh;
   filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 1, 0.3));
-  border-radius: 10px 10px 0 0;
   background-color: #343434;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .Table {
   overflow-y: auto;
   height: 50vh;
-  width: 50vw;
+  width: 60vw;
   display: block;
   text-align: left;
   align-self: center;
   align-items: center;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .Table-header {
@@ -108,7 +108,7 @@ body {
 .Table th,
 td {
   padding: 12px 15px;
-  border: 2px solid #ff0000;
+  border: 2.5px solid #ff0000;
 }
 
 table {
