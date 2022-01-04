@@ -41,7 +41,7 @@ export default function Dashboard({ url }) {
                                     <th>Port</th>
                                     <th>Service</th>
                                     <th>Vulnerability</th>
-                                    <th>Description</th>
+                                    {/* <th>Description</th> */}
                                 </tr>
                             </tbody>
                             {<tbody>
@@ -50,7 +50,8 @@ export default function Dashboard({ url }) {
                                         <td>{data.port}</td>
                                         <td>{data.service.replace('_http-server-header:', '')}</td>
                                         <td><a href={vuln}>{vuln.replace('https://vulners.com/cve/', '')}</a></td>
-                                        <td>{data.descriptions[id]}</td>
+                                        {/* <td>{data.descriptions[id]}</td>
+                                        {console.log(data.descriptions[id])} */}
                                     </tr>
                                 ))}
                             </tbody>}
@@ -73,7 +74,6 @@ function useFetchData({ url }) {
                 setLoading(true);
                 const res = await axios.get('http://localhost:15411', { params: { url: url } });
                 const descriptions = await getDescriptions(res.data.vulns);
-                console.log(descriptions)
                 setData({
                     port: res.data.port,
                     service: res.data.service,
