@@ -91,18 +91,19 @@ body {
 .Table {
   overflow-y: auto;
   height: 50vh;
-  width: 30vw;
   display: block;
   text-align: left;
   align-self: center;
   align-items: center;
   border-radius: 10px 10px 10px 10px;
+  font-size: 1.5rem;
 }
 
 .Table-header {
   background: #ff0000;
   color: #ffffff;
   text-align: left;
+  font-size: 2rem;
 }
 
 .Table th,
