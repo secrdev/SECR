@@ -14,51 +14,53 @@ export default function Dashboard({ url }) {
         console.log(error);
     }
 
-    return (
-        <div className="Dashboard">
-            {!isLoading && data.descriptions !== null ? (
-                <>
-                    <div className="Progress-bar">
-                        <CircularProgressbar value={score} text={`${score}%`} background={true} styles={{
-                            root: {},
-                            path: {
-                                stroke: `rgba(255, 00, 00)`,
-                            },
-                            trail: {
-                                stroke: '#2b2b2b',
-                            },
-                            text: {
-                                fill: '#ff0000',
-                            },
-                            background: {
-                                fill: '#2b2b2b',
-                            }
-                        }} />
-                    </div><div className="Table-container">
-                        <table className="Table">
-                            <tbody>
-                                <tr className="Table-header">
-                                    <th>Port</th>
-                                    <th>Service</th>
-                                    <th>Vulnerability</th>
+    if (!isLoading) {
+        return (
+            <div className="Dashboard">
+                <div className="Progress-bar">
+                    <CircularProgressbar value={score} text={`${score}%`} background={true} styles={{
+                        root: {},
+                        path: {
+                            stroke: `rgba(255, 00, 00)`,
+                        },
+                        trail: {
+                            stroke: '#2b2b2b',
+                        },
+                        text: {
+                            fill: '#ff0000',
+                        },
+                        background: {
+                            fill: '#2b2b2b',
+                        }
+                    }} />
+                </div><div className="Table-container">
+                    <table className="Table">
+                        <tbody>
+                            <tr className="Table-header">
+                                <th>Port</th>
+                                <th>Service</th>
+                                <th>Vulnerability</th>
+                            </tr>
+                        </tbody>
+                        {<tbody>
+                            {data.vulns.map((vuln, id) => (
+                                <tr key={id}>
+                                    <td>{data.port}</td>
+                                    <td>{data.service.replace('_http-server-header:', '')}</td>
+                                    <td><a href={vuln}>{vuln.replace('https://vulners.com/cve/', '')}</a></td>
                                 </tr>
-                            </tbody>
-                            {<tbody>
-                                {data.vulns.map((vuln, id) => (
-                                    <tr key={id}>
-                                        <td>{data.port}</td>
-                                        <td>{data.service.replace('_http-server-header:', '')}</td>
-                                        <td><a href={vuln}>{vuln.replace('https://vulners.com/cve/', '')}</a></td>
-                                    </tr>
-                                ))}
-                            </tbody>}
-                        </table>
-                    </div>
-                </>
-            ) : (<Loadscreen />)}
-        </div>
-    )
-};
+                            ))}
+                        </tbody>}
+                    </table>
+                </div>
+            </div>
+        )
+    } else {
+        return (
+            <Loadscreen />
+        )
+    }
+}
 
 function useFetchData({ url }) {
     const [data, setData] = useState(null);
