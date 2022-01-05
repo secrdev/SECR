@@ -13,9 +13,9 @@ body {
 }
 
 .Progress-bar {
-  padding-top: 0.5vh;
-  width: 20vw;
-  height: 18vh;
+  margin-top: 0.5vh;
+  width: 20%;
+  height: 20%;
   filter: drop-shadow(0 0.75rem 1rem rgba(0, 0, 1, 0.35));
   text-align: center;
   font-weight: 650;
@@ -69,7 +69,7 @@ body {
   outline: none;
   background-image: linear-gradient(to right, #ff0000, #ff9500);
   color: #ffffff;
-  width: 7vw;
+  width: 7.25vw;
   height: 4.05vh;
   font-size: 2.5vh;
   font-weight: bold;
@@ -91,7 +91,7 @@ body {
 .Table {
   overflow-y: auto;
   height: 50vh;
-  width: 60vw;
+  width: 30vw;
   display: block;
   text-align: left;
   align-self: center;
