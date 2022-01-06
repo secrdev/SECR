@@ -14,7 +14,7 @@ type Report struct {
 
 var regexPatterns = map[string]string{
 	"cve":     `https://vulners.com/cve/CVE-\d{4}-\d{1,10}`,
-	"port":    `\d{0,5}\/tcp`,
+	"port":    `\d{0,5}\/\b\w{1,10}`,
 	"service": `(?:\_http-server-header:)[^\(*CR)]+`,
 }
 
