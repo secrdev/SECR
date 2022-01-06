@@ -23,7 +23,7 @@ export default function LandingPage() {
                     <h1 className="Logo">SECR</h1>
                     <div className="Input-container">
                         <form onSubmit={handleSubmit}>
-                            <input className="URL-input" value={url} type="text" placeholder="App URL" onChange={handleUrlChange} /><input className="URL-submit" type="submit" value="Scan" disabled={url.trim() === ''} />
+                            <input className="URL-input" value={url} type="text" placeholder="App URL" onChange={handleUrlChange} maxLength="2100" /><input className="URL-submit" type="submit" value="Scan" disabled={url.trim() === ''} />
                         </form>
                     </div>
                 </div>
