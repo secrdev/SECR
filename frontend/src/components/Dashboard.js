@@ -8,52 +8,58 @@ import Loadscreen from './Loadscreen';
 export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: url });
 
-    const score = isLoading ? null : CalculateSecurityScore(1, data.vulns.length);
-
     if (error) {
         console.log(error);
     }
 
     if (!isLoading) {
         return (
-            <div className="Dashboard">
-                <div className="Progress-bar">
-                    <CircularProgressbar value={score} text={`${score}%`} background={true} styles={{
-                        root: {},
-                        path: {
-                            stroke: `rgba(255, 00, 00)`,
-                        },
-                        trail: {
-                            stroke: '#2b2b2b',
-                        },
-                        text: {
-                            fill: '#ff0000',
-                        },
-                        background: {
-                            fill: '#2b2b2b',
-                        }
-                    }} />
-                </div><div className="Table-container">
-                    <table className="Table">
-                        <tbody>
-                            <tr className="Table-header">
-                                <th>Port</th>
-                                <th>Service</th>
-                                <th>Vulnerability</th>
-                            </tr>
-                        </tbody>
-                        {<tbody>
-                            {data.vulns.map((vuln, id) => (
-                                <tr key={id}>
-                                    <td>{data.port}</td>
-                                    <td>{data.service.replace('_http-server-header:', '')}</td>
-                                    <td><a href={vuln}>{vuln.replace('https://vulners.com/cve/', '')}</a></td>
-                                </tr>
-                            ))}
-                        </tbody>}
-                    </table>
-                </div>
-            </div>
+            <>
+                {(data) ? (<>
+                    <div className="Dashboard">
+                        <div className="Progress-bar">
+                            <CircularProgressbar value={data.score} text={`${data.score}%`} background={true} styles={{
+                                root: {},
+                                path: {
+                                    stroke: `rgba(255, 00, 00)`,
+                                },
+                                trail: {
+                                    stroke: '#2b2b2b',
+                                },
+                                text: {
+                                    fill: '#ff0000',
+                                },
+                                background: {
+                                    fill: '#2b2b2b',
+                                }
+                            }} />
+                        </div><div className="Table-container">
+                            <table className="Table">
+                                <tbody>
+                                    <tr className="Table-header">
+                                        <th>Port</th>
+                                        <th>Service</th>
+                                        <th>Vulnerability</th>
+                                    </tr>
+                                </tbody>
+                                {<tbody>
+                                    {data.vulns.map((vuln, id) => (
+                                        <tr key={id}>
+                                            <td>{data.port}</td>
+                                            <td>{data.service.replace('_http-server-header:', '')}</td>
+                                            <td><a href={vuln}>{vuln.replace('https://vulners.com/cve/', '')}</a></td>
+                                        </tr>
+                                    ))}
+                                </tbody>}
+                            </table>
+                        </div>
+                    </div>
+                </>) : (<>
+                    <div className="Dashboard">
+                        <h1 className="SECR-message">No Vulnerabilities!</h1>
+                    </div>
+                </>)}
+            </>
         )
     } else {
         return (
@@ -76,6 +82,7 @@ function useFetchData({ url }) {
                     port: res.data.port,
                     service: res.data.service,
                     vulns: res.data.vulns,
+                    score: CalculateSecurityScore(1, res.data.vulns.length),
                 });
             } catch (err) {
                 setError(err);
