@@ -28,7 +28,7 @@
     "eject": "react-scripts eject",
     "preelectron-pack": "react-scripts npm build",
     "electron-pack": "build --em.main=build/electron.js",
-    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"  && ./backend.sh &"
+    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"  && ./backend.sh "
   },
   "eslintConfig": {
     "extends": [
