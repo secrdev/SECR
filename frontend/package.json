@@ -22,13 +22,13 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start && ./backend.sh &",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "preelectron-pack": "react-scripts npm build",
     "electron-pack": "build --em.main=build/electron.js",
-    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"  && ./backend.sh &"
   },
   "eslintConfig": {
     "extends": [
