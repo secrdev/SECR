@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "main": "public/electron.js",
+  "author": "Tarek Ali and SECR Team",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
@@ -24,6 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "preelectron-pack": "react-scripts npm build",
+    "electron-pack": "build --em.main=build/electron.js",
     "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
@@ -46,5 +50,15 @@
   },
   "devDependencies": {
     "electron": "^16.0.6"
+  },
+  "build": {
+    "appId": "com.electron.secr",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }
