@@ -46,7 +46,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  font-size: 10vw;
+  font-size: 9vw;
   margin: 0;
   filter: drop-shadow(0 0.75rem 1rem rgba(0, 0, 1, 0.5));
 }
