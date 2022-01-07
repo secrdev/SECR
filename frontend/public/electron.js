@@ -1,6 +1,9 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+const exec = require('child_process').exec;
+
+exec('../backend.sh &')
 
 const path = require('path');
 const url = require('url');
