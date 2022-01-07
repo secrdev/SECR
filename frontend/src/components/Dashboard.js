@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import CalculateSecurityScore from '../utils/CalculateSecurityScore';
 import Loadscreen from './Loadscreen';
+import React from 'react';
 
 export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: url });
