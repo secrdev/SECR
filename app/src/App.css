@@ -1,138 +1,133 @@
 body {
-  overflow: hidden;
-  background-color: #252525;
+    overflow: hidden;
+    background-color: #111;
 }
 
 .Dashboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #ffffff;
 }
 
 .Progress-bar {
-  margin-top: 0.5vh;
-  width: 20vw;
-  height: 20vh;
-  filter: drop-shadow(0 0.75rem 1rem rgba(0, 0, 1, 0.35));
-  text-align: center;
-  font-weight: 650;
+    margin-top: 0.5vh;
+    width: 20vw;
+    height: 20vh;
+    text-align: center;
+    font-weight: 650;
 }
 
 .Landing-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    flex-wrap: wrap;
 }
 
 .Logo {
-  background: linear-gradient(to right, #ff0000, #ff9500);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-size: 18vw;
-  margin: 0;
-  filter: drop-shadow(0 0.75rem 1rem rgba(0, 0, 1, 0.5));
+    background: linear-gradient(to right, #ff0000, #ff9500);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 18vw;
+    margin: 0;
 }
 
 .SECR-message {
-  background: linear-gradient(to right, #ff0000, #ff9500);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-size: 9vw;
-  margin: 0;
-  filter: drop-shadow(0 0.75rem 1rem rgba(0, 0, 1, 0.5));
+    background: linear-gradient(to right, #ff0000, #ff9500);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 9vw;
+    margin: 0;
 }
 
 .Input-container {
-  display: inline-block;
-  width: 47vw;
-  align-content: center;
-  filter: drop-shadow(0 1.75rem 1rem rgba(0, 0, 1, 0.5));
+    display: inline-block;
+    width: 47vw;
+    align-content: center;
 }
 
 .URL-input {
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  background-color: #343434;
-  height: 4vh;
-  color: #ffffff;
-  padding-left: 0.5vw;
-  font-weight: bold;
-  font-size: 2.5vh;
-  width: 81%;
-  border: none;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: #343434;
+    height: 4vh;
+    color: #ffffff;
+    padding-left: 0.5vw;
+    font-weight: bold;
+    font-size: 2.5vh;
+    width: 81%;
+    border: none;
 }
 
 .URL-submit {
-  border: none;
-  float: right;
-  border-radius: 8px;
-  outline: none;
-  background-image: linear-gradient(to right, #ff0000, #ff9500);
-  color: #ffffff;
-  width: 7.25vw;
-  height: 4.05vh;
-  font-size: 2.5vh;
-  font-weight: bold;
+    border: none;
+    float: right;
+    border-radius: 8px;
+    outline: none;
+    background-image: linear-gradient(to right, #ff0000, #ff9500);
+    color: #ffffff;
+    width: 7.25vw;
+    height: 4.05vh;
+    font-size: 2.5vh;
+    font-weight: bold;
 }
 
 .URL-input::placeholder {
-  padding-left: 0.1vw;
-  font-weight: bold;
-  color: linear-gradient(to right, #ff0000, #ff9500);
+    padding-left: 0.1vw;
+    font-weight: bold;
+    color: linear-gradient(to right, #ff0000, #ff9500);
 }
 
 .Table-container {
-  margin-top: 25vh;
-  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 1, 0.3));
-  background-color: #343434;
-  border-radius: 10px 10px 10px 10px;
+    margin-top: 25vh;
+    background-color: #343434;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .Table {
-  overflow-y: auto;
-  height: 50vh;
-  display: block;
-  text-align: left;
-  align-self: center;
-  align-items: center;
-  border-radius: 10px 10px 10px 10px;
-  font-size: 1.5rem;
+    overflow-y: auto;
+    height: 50vh;
+    display: block;
+    text-align: left;
+    align-self: center;
+    align-items: center;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 1.5rem;
 }
 
 .Table-header {
-  background: #ff0000;
-  color: #ffffff;
-  text-align: left;
-  font-size: 2rem;
+    background: #ff0000;
+    color: #ffffff;
+    text-align: left;
+    font-size: 2rem;
 }
 
 .Table th,
 td {
-  padding: 12px 15px;
-  border: 2.5px solid #ff0000;
+    padding: 12px 15px;
+    border: 2.5px solid #ff0000;
 }
 
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 .Table::-webkit-scrollbar {
-  width: 0vw;
-  height: 0vw;
+    width: 0vw;
+    height: 0vw;
 }
 
 a {
-  text-decoration: underline;
-  color: #ffffff;
-  text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+    text-align: center;
 }
