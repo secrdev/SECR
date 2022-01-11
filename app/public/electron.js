@@ -11,13 +11,6 @@ let mainWindow;
 
 function createWindow() {
     mainWindow = new BrowserWindow({ width: 1920, height: 1080 });
-    if (!isDev) {
-        exec("./secr", (err) => {
-            if (err) {
-                console.log(err);
-            }
-        });
-    }
     mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
     mainWindow.on('closed', () => mainWindow = null);
 }
