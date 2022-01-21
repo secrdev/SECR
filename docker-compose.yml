@@ -1,7 +1,11 @@
 services:
   backend:
     build: backend/
+    ports:
+      - 8080:8080
   frontend:
     build: app/
     depends_on:
       - backend
+    ports:
+      - 3000:3000
