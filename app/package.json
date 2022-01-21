@@ -25,12 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "package-mac": "electron-packager . SECR --overwrite --platform=darwin --arch=x64 --icon=public/SECR.icns --out=release-builds",
-    "package-win": "electron-packager . SECR --overwrite --platform=win32 --arch=x64 --icon=public/SECR.ico --out=release-builds",
-    "package-linux": "electron-packager . SECR --overwrite --platform=linux --arch=x64 --icon=public/SECR.png --out=release-builds",
-    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\" \"cd backend/ && go run main.go\"",
-    "run-backend": "./backend.sh"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
