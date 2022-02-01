@@ -78,10 +78,12 @@ function useFetchData({ url }) {
         try {
             setLoading(true);
             const res = await axios.get('http://localhost:15411', { params: { url: url } });
+            const descriptions = await getDescriptions(res.data.vulns);
             setData({
                 port: res.data.port,
                 service: res.data.service,
                 vulns: res.data.vulns,
+                descriptions: descriptions,
                 score: CalculateSecurityScore(1, res.data.vulns.length),
             });
         } catch (err) {
