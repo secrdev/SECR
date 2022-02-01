@@ -74,24 +74,24 @@ function useFetchData({ url }) {
     const [isLoading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                setLoading(true);
-                const res = await axios.get('http://localhost:15411', { params: { url: url } });
-                setData({
-                    port: res.data.port,
-                    service: res.data.service,
-                    vulns: res.data.vulns,
-                    score: CalculateSecurityScore(1, res.data.vulns.length),
-                });
-            } catch (err) {
-                setError(err);
-            } finally {
-                setLoading(false);
-            }
+    const fetchData = async () => {
+        try {
+            setLoading(true);
+            const res = await axios.get('http://localhost:15411', { params: { url: url } });
+            setData({
+                port: res.data.port,
+                service: res.data.service,
+                vulns: res.data.vulns,
+                score: CalculateSecurityScore(1, res.data.vulns.length),
+            });
+        } catch (err) {
+            setError(err);
+        } finally {
+            setLoading(false);
         }
+    }
 
+    useEffect(() => {
         fetchData();
     }, [url]);
 
