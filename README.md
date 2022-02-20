@@ -4,7 +4,7 @@ Application security made easy.
 
 ## How It Works
 
-<img src="howitworks.png" style="height: 200%"/>
+![](howitworks.png)
 
 ## Features
 
