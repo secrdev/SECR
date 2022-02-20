@@ -18,11 +18,11 @@ Application security made easy.
 
 ### Current features:
 
-1. Basic vulnerability scanning using [nmap-vulners](https://github.com/vulnersCom/nmap-vulners) 
-2. Metadata about vulnerabilities (Port and Associated Services), along with their CVE IDs, which, can also be found on [Vulners](https://vulners.com/), hyperlinked in SECR's dashboard
-3. Generalized security score for scanned application (based on number of vulnerabilities compared to services running)
+- Basic vulnerability scanning using [nmap-vulners](https://github.com/vulnersCom/nmap-vulners) 
+- Metadata about vulnerabilities (Port and Associated Services), along with their CVE IDs, which, can also be found on [Vulners](https://vulners.com/), hyperlinked in SECR's dashboard
+- Generalized security score for scanned application (based on number of vulnerabilities compared to services running)
 
 ### Planned features:
 
-1. Displaying steps to recreate and patch each vulnerability found
-2. Implementing SECR in a Chrome extension and/or Github Marketplace app
+- Displaying steps to recreate and patch each vulnerability found
+- Implementing SECR in a Chrome extension and/or Github Marketplace app
