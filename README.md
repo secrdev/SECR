@@ -8,6 +8,12 @@ Application security made easy.
     <img src="./howitworks.png" alt="How SECR works" width="100%" />  
 </div>
 
+## Get Started
+
+1. `git clone https://github.com/secrdev/SECR`
+2. Execute `./run.sh`
+3. Open `localhost:3000` in your browser 
+
 ## Features
 
 ### Current features:
@@ -21,16 +27,3 @@ Application security made easy.
 1. Descriptions of vulnerabilities, severity scores, and more metadata presented simply
 2. Steps to recreate each vulnerability 
 3. Steps to patch each vulnerability
-
-## Tech Stack 
-
-### Frontend
-
-1. React + JS (planning on migrating to NextJS + TS)
-2. Vanilla CSS and custom components (planning on migrating to SCSS)
-
-### Backend
-
-1. Go, with an internal REST API that invokes nmap-vulners to scan applications and serve results
-
-## Run SECR
