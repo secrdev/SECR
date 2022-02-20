@@ -4,7 +4,7 @@ Application security made easy.
 
 ## How It Works
 
-![](howitworks.png)
+![How SECR works](howitworks.png)
 
 ## Features
 
