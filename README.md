@@ -1,5 +1,11 @@
 # SECR
 
-## Run SECR
+Application security made easy.
 
-`./run.sh` (runs SECR docker compose architecture which includes the react app + internal Go API)
+## How It Works
+
+## Features
+
+## Tech Stack 
+
+## Run SECR
