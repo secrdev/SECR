@@ -10,13 +10,13 @@ Application security made easy.
 
 ## Features
 
-Currently SECR has the following features:
+### Current features:
 
-1. Basic vulnerability scanning with [nmap-vulners](https://github.com/vulnersCom/nmap-vulners) internally
-2. Metadata about vulnerabilities (Port and Associated Service), along with their CVE IDs, which, can also be found on [Vulners](https://vulners.com/), hyperlinked in SECR's dashboard
+1. Basic vulnerability scanning using [nmap-vulners](https://github.com/vulnersCom/nmap-vulners) 
+2. Metadata about vulnerabilities (Port and Associated Services), along with their CVE IDs, which, can also be found on [Vulners](https://vulners.com/), hyperlinked in SECR's dashboard
 3. Generalized security score for scanned application (based on number of vulnerabilities compared to services running)
 
-I'm planning on adding more features in the future, such as:
+### Planned features:
 
 1. Descriptions of vulnerabilities, severity scores, and more metadata presented simply
 2. Steps to recreate each vulnerability 
