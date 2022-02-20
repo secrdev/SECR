@@ -26,3 +26,7 @@ Application security made easy.
 
 - Displaying steps to recreate and patch each vulnerability found
 - Implementing SECR in a Chrome extension and/or Github Marketplace app
+
+## Contributing
+
+Check out [CONTRIBUTING](CONTRIBUTING.md)
