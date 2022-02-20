@@ -24,6 +24,5 @@ Application security made easy.
 
 ### Planned features:
 
-1. Descriptions of vulnerabilities, severity scores, and more metadata presented simply
-2. Steps to recreate each vulnerability 
-3. Steps to patch each vulnerability
+1. Displaying steps to recreate and patch each vulnerability found
+2. Implementing SECR in a Chrome extension and/or Github Marketplace app
