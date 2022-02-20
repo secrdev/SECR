@@ -4,7 +4,9 @@ Application security made easy.
 
 ## How It Works
 
-![How SECR works](howitworks.png)
+<div align="center">
+    <img src="./howitworks.png" alt="How SECR works" width="100%" />  
+</div>
 
 ## Features
 
