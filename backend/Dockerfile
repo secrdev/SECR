@@ -1,9 +1,12 @@
 FROM golang:1.17
 
-WORKDIR /go/secr 
+WORKDIR /backend  
+
 COPY . . 
 
 RUN go get -d -v ./...
 RUN go install -v ./...
 
-CMD ["secr"]
+RUN go build -o secr . 
+
+CMD ["/backend/secr"]

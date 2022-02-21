@@ -2,7 +2,7 @@ services:
   backend:
     build: backend/
     ports:
-      - 8080:8080
+      - 15411:15411
   frontend:
     build: app/
     depends_on:
