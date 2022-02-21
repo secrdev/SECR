@@ -95,7 +95,7 @@ function useFetchData({ url }) {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    });
 
     return {
         data,
