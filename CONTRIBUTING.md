@@ -16,7 +16,7 @@ For the next couple of months, SECR will remain unstable, and as such, will not 
 ### You can contribute code like so:
 
 1. Fork the repository.
-2. Open a feature branch for the issue you want to address, with the following syntax:
+2. Create a feature branch for the issue you want to address using the following syntax:
    - `<feature-name>-<issue-number>`
 3. Open a pull request against master.
 4. If it either fixes a bug, or implements a new feature properly, it will be approved and merged. 
