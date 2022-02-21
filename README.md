@@ -11,7 +11,7 @@ Application security made easy.
 ## Get Started
 
 1. `git clone https://github.com/secrdev/SECR`
-2. Execute `./run.sh`
+2. `./run.sh` *(builds + runs Docker Compose)*
 3. Open `localhost:3000` in your browser 
 
 ## Features
