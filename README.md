@@ -18,9 +18,9 @@ Application security made easy.
 
 ### Current features:
 
-- Basic vulnerability scanning using [nmap-vulners](https://github.com/vulnersCom/nmap-vulners) 
-- Metadata about vulnerabilities (Port and Associated Services), along with their CVE IDs, which, can also be found on [Vulners](https://vulners.com/), hyperlinked in SECR's dashboard
-- Generalized security score for scanned application (based on number of vulnerabilities compared to services running)
+- Vulnerability scanning using [nmap-vulners](https://github.com/vulnersCom/nmap-vulners) 
+- Metadata about vulnerabilities, along with their CVE IDs, which can also be found on [Vulners](https://vulners.com/)
+- Generalized security score for scanned applications 
 
 ### Planned features:
 
