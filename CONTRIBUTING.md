@@ -1,4 +1,4 @@
-# How to contribute to SECR
+# Contributing to SECR 
 
 ## Issues
 
