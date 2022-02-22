@@ -1,5 +1,7 @@
 # SECR
 
+Application security made easy.
+
 <div align="left">
     <a href="https://discord.com/invite/g7XEQgF5BH">
 		<img src="https://img.shields.io/discord/884452044566577182?color=738ADB&label=discord&style=flat-square" />
