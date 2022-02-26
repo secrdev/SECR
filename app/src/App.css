@@ -87,20 +87,34 @@ body {
   color: linear-gradient(to right, #ff0000, #ff9500);
 }
 
-.Table-container {
-  margin-top: 26vh;
+.URL-input-table {
+  border: none;
+  border-radius: 8px;
+  outline: none;
   background-color: #343434;
-  border-radius: 10px 10px 10px 10px;
+  height: 5vh;
+  color: #ffffff;
+  padding-left: 0.5vw;
+  font-weight: bold;
+  font-size: 3vh;
+  width: 81%;
+  border: none;
+}
+
+.Table-container {
+  margin-top: 25vh;
+  background-color: #343434;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .Table {
   overflow-y: auto;
-  height: 50vh;
+  height: 45vh;
   display: block;
   text-align: left;
   align-self: center;
   align-items: center;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 0px 0px;
   font-size: 1.5rem;
 }
 

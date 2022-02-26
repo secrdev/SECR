@@ -8,6 +8,9 @@ import React from 'react';
 
 export default function Dashboard({ url }) {
     const { data, isLoading, error } = useFetchData({ url: url });
+    const [searchTerm, setSearchTerm] = useState('');
+
+    console.log(searchTerm);
 
     if (error) {
         console.log(error);
@@ -34,7 +37,9 @@ export default function Dashboard({ url }) {
                                     fill: '#2b2b2b',
                                 }
                             }} />
-                        </div><div className="Table-container">
+                        </div>
+                        <div className="Table-container">
+                            <input className="URL-input-table" type="text" placeholder="Search..." maxLength="2100" onChange={(e) => setSearchTerm(e.target.value)} />
                             <table className="Table">
                                 <tbody>
                                     <tr className="Table-header">
@@ -44,7 +49,12 @@ export default function Dashboard({ url }) {
                                     </tr>
                                 </tbody>
                                 {<tbody>
-                                    {data.vulns.map((vuln, id) => (
+                                    {data.vulns.filter((val) => {
+                                        if (searchTerm == "") {
+                                            console.log(val.port);
+                                            return val;
+                                        };
+                                    }).map((vuln, id) => (
                                         <tr key={id}>
                                             <td>{data.port}</td>
                                             <td>{data.service.replace('_http-server-header:', '')}</td>
