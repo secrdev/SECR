@@ -39,7 +39,7 @@ export default function Dashboard({ url }) {
                             }} />
                         </div>
                         <div className="Table-container">
-                            <input className="URL-input-table" type="text" placeholder="Search..." maxLength="2100" onChange={(e) => setSearchTerm(e.target.value)} />
+                            <input className="URL-input-table" type="text" placeholder="Search..." maxLength="2100" onChange={(e) => setSearchTerm(e.target.value.trim())} />
                             <table className="Table">
                                 <tbody>
                                     <tr className="Table-header">
@@ -89,12 +89,10 @@ function useFetchData({ url }) {
         try {
             setLoading(true);
             const res = await axios.get('http://localhost:15411', { params: { url: url } });
-            const descriptions = await getDescriptions(res.data.vulns);
             setData({
                 port: res.data.port,
                 service: res.data.service,
                 vulns: res.data.vulns,
-                descriptions: descriptions,
                 score: CalculateSecurityScore(1, res.data.vulns.length),
             });
         } catch (err) {
