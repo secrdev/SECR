@@ -50,7 +50,7 @@ export default function Dashboard({ url }) {
                                 </tbody>
                                 {<tbody>
                                     {data.vulns.filter((val) => {
-                                        if (searchTerm == "") {
+                                        if (searchTerm === "") {
                                             return val;
                                         } else if (val.toLowerCase().includes(searchTerm.toLowerCase())) {
                                             return val;
