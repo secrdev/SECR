@@ -51,9 +51,10 @@ export default function Dashboard({ url }) {
                                 {<tbody>
                                     {data.vulns.filter((val) => {
                                         if (searchTerm == "") {
-                                            console.log(val.port);
                                             return val;
-                                        };
+                                        } else if (val.toLowerCase().includes(searchTerm.toLowerCase())) {
+                                            return val;
+                                        }
                                     }).map((vuln, id) => (
                                         <tr key={id}>
                                             <td>{data.port}</td>
