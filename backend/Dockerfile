@@ -9,4 +9,6 @@ RUN go install -v ./...
 
 RUN go build -o secr . 
 
+RUN apk add --no-cache nmap
+
 CMD ["/backend/secr"]
