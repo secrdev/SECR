@@ -23,7 +23,8 @@ Application security made easy.
    2. `go run main.go`
 4. Run Frontend
    1. `cd app/`
-   2. `npm start`
+   2. `npm install`
+   3. `npm start`
 5. Open `localhost:3000` in your browser 
 
 ## Features
