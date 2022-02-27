@@ -15,7 +15,7 @@ Application security made easy.
 ## Get Started
 
 1. `git clone https://github.com/secrdev/SECR`
-2. Install nmap
+2. Install Nmap
 3. Run Backend
    1. `cd backend/`
    2. `go run main.go`
