@@ -17,8 +17,14 @@ Application security made easy.
 ## Get Started
 
 1. `git clone https://github.com/secrdev/SECR`
-2. `./run.sh` *(builds + runs Docker Compose)*
-3. Open `localhost:3000` in your browser 
+2. Install nmap
+3. Run Backend
+   1. `cd backend/`
+   2. `go run main.go`
+4. Run Frontend
+   1. `cd app/`
+   2. `npm run start`
+5. Open `localhost:3000` in your browser 
 
 ## Features
 
