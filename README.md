@@ -1,5 +1,4 @@
 <div align="center">
-
 <h1>SECR</h1>
 <h2>Application security made easy.</h2>
 </div>
