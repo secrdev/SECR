@@ -39,7 +39,7 @@ export default function Dashboard({ url }) {
                             }} />
                         </div>
                         <div className="Table-container">
-                            <input className="URL-input-table" type="text" placeholder="Search..." maxLength="2100" onChange={(e) => setSearchTerm(e.target.value.trim())} />
+                            <input className="URL-input-table" type="text" placeholder="Search..." maxLength={2100} onChange={(e) => setSearchTerm(e.target.value.trim())} />
                             <table className="Table">
                                 <tbody>
                                     <tr className="Table-header">
