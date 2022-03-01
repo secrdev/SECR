@@ -1,31 +1,25 @@
-# SECR
+<div align="center">
 
-Application security made easy.
+<h1>SECR</h1>
+<h2>Application security made easy.</h2>
+</div>
 
-<div align="left">
+
+<div align="center">
     <a href="https://discord.com/invite/g7XEQgF5BH">
-		<img src="https://img.shields.io/discord/884452044566577182?color=738ADB&label=discord&style=flat-square" />
+		<img src="https://img.shields.io/discord/884452044566577182?color=738ADB&label=discord&style=for-the-badge" />
 	</a>
 </div>
 
-## How It Works
+<div align="center">
+<h2>How It Works</h2>
+<img src="demo.gif" width="512"/>
+</div>
 
-![](demo.gif)
+<div align="center">
+<h2>Features</h2>
+</div>
 
-## Get Started
-
-1. `git clone https://github.com/secrdev/SECR`
-2. Install Nmap
-3. Run Backend
-   1. `cd backend/`
-   2. `go run main.go`
-4. Run Frontend
-   1. `cd app/`
-   2. `npm install`
-   3. `npm start`
-5. Open `localhost:3000` in your browser 
-
-## Features
 
 ### Current features:
 
@@ -38,6 +32,18 @@ Application security made easy.
 - Steps to recreate and patch each vulnerability found
 - Implementing SECR in a Chrome extension and/or Github Marketplace app
 
-## Contributing
 
-Check out [CONTRIBUTING](CONTRIBUTING.md)
+<div align="center">
+<h2>Contributing</h2>
+</div>
+
+Check out [CONTRIBUTING](CONTRIBUTING.md) for more guidlines on contributing to this project. We expect you to abide by our [Code Of Conduct](CODE-OF-CONDUCT.md) and behave respnsively. 
+
+<div align="center">
+<h2>License</h2>
+</div>
+
+
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+
+MIT @ The SECR Foundation, [Tarek Ali](https://github.com/DGKSK8LIFE), [Rithul Kamesh](https://github.com/rithulkamesh)

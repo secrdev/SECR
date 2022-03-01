@@ -1,5 +1,18 @@
 # Contributing to SECR 
 
+## Get Started
+
+1. `git clone https://github.com/secrdev/SECR`
+2. Install Nmap
+3. Run Backend
+   1. `cd backend/`
+   2. `go run main.go`
+4. Run Frontend
+   1. `cd app/`
+   2. `npm install`
+   3. `npm start`
+5. Open `localhost:3000` in your browser 
+
 ## Issues
 
 ### Issues can either be:
