@@ -4,7 +4,6 @@
 <h2>Application security made easy.</h2>
 </div>
 
-
 <div align="center">
     <a href="https://discord.com/invite/g7XEQgF5BH">
 		<img src="https://img.shields.io/discord/884452044566577182?color=738ADB&label=discord&style=for-the-badge" />
@@ -20,7 +19,6 @@
 <h2>Features</h2>
 </div>
 
-
 ### Current features:
 
 - Vulnerability scanning using [nmap-vulners](https://github.com/vulnersCom/nmap-vulners) 
@@ -32,18 +30,8 @@
 - Steps to recreate and patch each vulnerability found
 - Implementing SECR in a Chrome extension and/or Github Marketplace app
 
-
 <div align="center">
 <h2>Contributing</h2>
 </div>
 
-Check out [CONTRIBUTING](CONTRIBUTING.md) for more guidlines on contributing to this project. We expect you to abide by our [Code Of Conduct](CODE-OF-CONDUCT.md) and behave respnsively. 
-
-<div align="center">
-<h2>License</h2>
-</div>
-
-
-A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
-
-MIT @ The SECR Foundation, [Tarek Ali](https://github.com/DGKSK8LIFE), [Rithul Kamesh](https://github.com/rithulkamesh)
+Check out [CONTRIBUTING](CONTRIBUTING.md) and in the process, abide by our [Code Of Conduct](CODE-OF-CONDUCT.md).
