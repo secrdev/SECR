@@ -1,12 +1,9 @@
 <div align="center">
 <h1>SECR</h1>
-<h2>Application security made easy.</h2>
-</div>
-
-<div align="center">
-    <a href="https://discord.com/invite/g7XEQgF5BH">
+<a href="https://discord.com/invite/g7XEQgF5BH">
 		<img src="https://img.shields.io/discord/884452044566577182?color=738ADB&label=discord&style=for-the-badge" />
-	</a>
+</a>
+<h4>Application security made easy.</h4>
 </div>
 
 <div align="center">
