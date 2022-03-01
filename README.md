@@ -34,4 +34,4 @@
 <h2>Contributing</h2>
 </div>
 
-Check out [CONTRIBUTING](CONTRIBUTING.md) and in the process, abide by our [Code Of Conduct](CODE-OF-CONDUCT.md).
+Check out [CONTRIBUTING](CONTRIBUTING.md)
