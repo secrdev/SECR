@@ -1,18 +1,5 @@
 # Contributing to SECR 
 
-## Get Started
-
-1. `git clone https://github.com/secrdev/SECR`
-2. Install Nmap
-3. Run Backend
-   1. `cd backend/`
-   2. `go run main.go`
-4. Run Frontend
-   1. `cd app/`
-   2. `npm install`
-   3. `npm start`
-5. Open `localhost:3000` in your browser 
-
 ## Issues
 
 ### Issues can either be:
@@ -33,4 +20,3 @@ For the next couple of months, SECR will remain unstable, and as such, will not 
    - `<feature-name>-<issue-number>`
 3. Open a pull request against master.
 4. If it either fixes a bug, or implements a new feature properly, it will be approved and merged. 
-
