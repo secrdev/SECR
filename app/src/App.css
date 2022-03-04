@@ -129,6 +129,7 @@ body {
 td {
   padding: 12px 15px;
   border: 2.5px solid #ff0000;
+  width: 100%;
 }
 
 table {
