@@ -13,9 +13,9 @@ body {
 }
 
 .Progress-bar {
-  margin-top: 0.5vh;
-  width: 21vw;
-  height: 21vh;
+  margin-top: 1vh;
+  width: 300px;
+  height: 300px;
   text-align: center;
   font-weight: 650;
 }
@@ -102,14 +102,14 @@ body {
 }
 
 .Table-container {
-  margin-top: 25vh;
+  margin-top: 5vh;
   background-color: #343434;
   border-radius: 10px 10px 0px 0px;
 }
 
 .Table {
   overflow-y: auto;
-  height: 48vh;
+  height: 45vh;
   display: block;
   text-align: left;
   align-self: center;
